@@ -8,8 +8,14 @@ package baseline;
 public class Solution41 {
     public static void main(String[] args) {
         //Create NameSorter object
+        NameSorter sortManager = new NameSorter();
+
         //Call readFile method
+        sortManager.readFile();
         //Call sortNames(getPeople()) method
+        sortManager.sortNames(sortManager.getPeople());
+
         //Call outputSortedNames() method
+        sortManager.outputSortedNames(sortManager.getPeople());
     }
 }

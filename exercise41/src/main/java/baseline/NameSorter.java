@@ -5,14 +5,15 @@
 
 package baseline;
 
-import java.lang.reflect.Array;
-import java.nio.file.Paths;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 
 public class NameSorter {
+    private File file = new File("data/exercise41_input.txt");
     private int numPeople;
     private List<String> people = new ArrayList<>();
-    //private Map<String, String> firstName = new HashMap<>();
 
     public NameSorter() {
         this.numPeople = 0;
@@ -20,29 +21,50 @@ public class NameSorter {
 
     public void readFile(){
         //try(open input file)
+        try(Scanner inputFile = new Scanner(file)) {
             //while(there are names to read in file)
+            while(inputFile.hasNextLine()) {
                 //Read Last name and first name into ArrayList
+                people.add(inputFile.nextLine());
+
                 //numPeople++
-                //Use last name as key for first name in Map (numPeople used as index)
+                this.numPeople++;
+            }
+        }
         //catch(IOException || NoSuchElementException || IllegalStateException e)
+        catch(IOException | NoSuchElementException | IllegalStateException e) {
             //printStackTrace;
+            e.printStackTrace();
+        }
     }
 
     public List<String> getPeople() {
         return people;
     }
 
-    public void sortNames(List people) {
+    public void sortNames(List<String> people) {
         //sort(people)
+        Collections.sort(people);
     }
 
-    public void outputSortedNames(List people) {
+    public void outputSortedNames(List<String> people) {
         //try(open output file)
-                //print "Total of 'numPeople' names"
-                //print "-----------------"
-                //for(people)
-                    //print "'people'"
+        try(Formatter outputFile = new Formatter("data/exercise41_output.txt")) {
+            //print "Total of 'numPeople' names"
+            outputFile.format("Total of %d names%n", this.numPeople);
+            //print "-----------------"
+            outputFile.format("-----------------%n");
+
+            //for(people)
+            for(String p : people) {
+                //print "'people'"
+                outputFile.format("%s%n", p);
+            }
+        }
         //catch(SecurityException || FileNotFoundException || FormatterClosedException e)
+        catch(SecurityException | FileNotFoundException | FormatterClosedException e) {
             //printStackTrace();
+            e.printStackTrace();
+        }
     }
 }

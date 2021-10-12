@@ -1,0 +1,28 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 first_name last_name
+ */
+
+@startuml
+'https://plantuml.com/sequence-diagram
+NameSorter o-- Solution41
+
+
+class Solution41 {
+    object NameSorter
+}
+
+class NameSorter {
+    - file: File
+    - numPeople: int
+    - people: ArrayList
+
+    + NameSorter()
+
+    + readFile(): void
+    + getPeople(): ArrayList
+    + sortNames(ArrayList): void
+    + outputSortedNames(ArrayList): void
+}
+
+@enduml

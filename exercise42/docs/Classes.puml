@@ -1,0 +1,34 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 first_name last_name
+ */
+
+@startuml
+'https://plantuml.com/sequence-diagram
+
+DataParser o-- Solution42
+
+class Solution42 {
+    main()
+        'Creates DataParser Object and uses it to parse data
+}
+
+class DataParser {
+    - lastNames: ArrayList<String>
+    - firstNames: ArrayList<String>
+    - salaries: ArrayList<String>
+    - amntOfPeople: int
+
+    + DataParser()
+        'Initializes amount of people to 0
+
+    + readInFile(File): void
+
+    + getLastNames: ArrayList<String>
+    + getFirstNames: ArrayList<String>
+    + getSalaries: ArrayList<String>
+
+    + outputFormattedData(File): void
+}
+
+@enduml

@@ -5,24 +5,27 @@
 
 @startuml
 'https://plantuml.com/sequence-diagram
+
 NameSorter o-- Solution41
 
-
 class Solution41 {
-    object NameSorter
+    + main()
+        'Creates NameSorter object and uses it to manage names
 }
 
 class NameSorter {
     - file: File
     - numPeople: int
-    - people: ArrayList
+    - people: ArrayList<String>
 
     + NameSorter()
+        'Initializes the amount of people to 0
 
     + readFile(): void
-    + getPeople(): ArrayList
-    + sortNames(ArrayList): void
-    + outputSortedNames(ArrayList): void
+    + getPeople(): ArrayList<String>
+
+    + sortNames(ArrayList<String>): void
+    + outputSortedNames(ArrayList<String>): void
 }
 
 @enduml

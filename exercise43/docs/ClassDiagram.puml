@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+WebsiteGenerator o-- Solution43
+
+class Solution43 {
+    webDev: WebsiteGenerator
+
+    webDev.askForWebsiteInfo
+    webDev.createWebsiteFolder
+    webDev.createHtml
+    webDev.createJavaScriptFolder
+    webDev.createJavaScriptFolder
+    webDev.createCssFolder
+}
+
+class WebsiteGenerator {
+    - input: Scanner
+    - websiteName: String
+    - authorName: String
+    - mainFolderPath: String
+    - websiteFolderPath: String
+    - creationPhrase: String
+    - includeJavaScriptFolder: boolean
+    - includeCssFolder: boolean
+
+    + WebsiteGenerator()
+        'Initializes fields to "" and main folder path to "data/"
+
+    + askForWebsiteInfo(): void
+    + createWebsiteFolder(): String
+    + createHtml(): String
+    + createJavaScriptFolder: String
+    + createCssFolder: String
+}
+
+@enduml

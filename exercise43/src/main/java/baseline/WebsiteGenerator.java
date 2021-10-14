@@ -17,9 +17,9 @@ public class WebsiteGenerator {
     private String authorName;
     private final String mainFolderPath;
     private String websiteFolderPath;
+    private final String creationPhrase;
     private boolean includeJavaScriptFolder;
     private boolean includeCssFolder;
-    private final String creationPhrase;
 
     public WebsiteGenerator() {
         //Initialize Strings to ""
@@ -62,6 +62,14 @@ public class WebsiteGenerator {
         //CSSFolder = True if input is 'y' or false if input is 'n'
         temp = input.nextLine();
         this.includeCssFolder = temp.equalsIgnoreCase("y");
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public void setWebsiteName(String websiteName) {
+        this.websiteName = websiteName;
     }
 
     public String createWebsiteFolder() {

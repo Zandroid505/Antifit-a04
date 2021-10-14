@@ -1,0 +1,2 @@
+I will use this text file for testing.
+Junit will use this text file.

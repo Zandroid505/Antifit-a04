@@ -9,8 +9,10 @@
 NameSorter o-- Solution41
 
 class Solution41 {
-    + main()
-        'Creates NameSorter object and uses it to manage names
+    'Creates NameSorter object and uses it to manage names
+    readFile()
+    sortNames(ArrayList<String>)
+    outputSortedNames(ArrayList<String>)
 }
 
 class NameSorter {

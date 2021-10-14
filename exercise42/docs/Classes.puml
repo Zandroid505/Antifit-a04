@@ -6,10 +6,11 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-DataParser o-- Solution42
+DataParser <|-- Solution42
 
 class Solution42 {
-    main()
+    readInFile(File)
+    outputFormattedData(File)
         'Creates DataParser Object and uses it to parse data
 }
 

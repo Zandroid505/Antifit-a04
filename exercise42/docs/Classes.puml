@@ -27,9 +27,9 @@ class DataParser {
 
     + readInFile(File): void
 
-    + getLastNames: ArrayList<String>
-    + getFirstNames: ArrayList<String>
-    + getSalaries: ArrayList<String>
+    + getLastNames(): ArrayList<String>
+    + getFirstNames(): ArrayList<String>
+    + getSalaries(): ArrayList<String>
 
     + outputFormattedData(File): void
 }

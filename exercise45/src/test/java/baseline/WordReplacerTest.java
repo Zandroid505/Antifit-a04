@@ -19,20 +19,18 @@ class WordReplacerTest {
 
     @Test
     void checkIfFileIsReadInCorrectly() {
-        StringBuilder expected = new StringBuilder();
-
-        expected.append("I will utilize this text file for testing.\n" +
-                "Junit will utilize this text file.");
+        String expected = "I will utilize this text file for testing.\n" +
+                "Junit will utilize this text file.\n";
 
         litTeacher.readInputFile("data/testInFile.txt");
 
-        assertEquals(expected, litTeacher.getOriginalText());
+        assertEquals(expected, litTeacher.getOriginalText().toString());
     }
 
     @Test
     void checkIfWordsAreReplacedProperly() {
         String expected = "I will use this text file for testing.\n" +
-                "Junit will use this text file.";
+                "Junit will use this text file.\n";
 
         litTeacher.readInputFile("data/testInFile.txt");
 
@@ -46,7 +44,7 @@ class WordReplacerTest {
 
         File expectedFile = new File("data/testOutExpected.txt");
         String editedString = "I will use this text file for testing.\n" +
-                "Junit will use this text file.";
+                "Junit will use this text file.\n";
 
         litTeacher.readInputFile("data/testInFile.txt");
 
@@ -69,7 +67,7 @@ class WordReplacerTest {
             e.printStackTrace();
         }
 
-        assertEquals(expected, actual);
+        assertEquals(expected.toString(), actual.toString());
 
     }
 }

@@ -4,14 +4,17 @@
 WebsiteGenerator o-- Solution43
 
 class Solution43 {
-    webDev: WebsiteGenerator
+    'Creates WebsiteGenerator object and calls methods in class
 
-    webDev.askForWebsiteInfo
-    webDev.createWebsiteFolder
-    webDev.createHtml
-    webDev.createJavaScriptFolder
-    webDev.createJavaScriptFolder
-    webDev.createCssFolder
+    askForWebsiteInfo()
+
+    createWebsiteFolder()
+    createHtml()
+
+    createJavaScriptFolder()
+    createJavaScriptFolder()
+
+    createCssFolder()
 }
 
 class WebsiteGenerator {
@@ -28,10 +31,15 @@ class WebsiteGenerator {
         'Initializes fields to "" and main folder path to "data/"
 
     + askForWebsiteInfo(): void
+    + setAuthorName(String): void
+
+    + setWebsiteName(String): void
     + createWebsiteFolder(): String
+
     + createHtml(): String
-    + createJavaScriptFolder: String
-    + createCssFolder: String
+    + createJavaScriptFolder(): String
+
+    + createCssFolder(): String
 }
 
 @enduml

@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.util.*;
 
 public class NameSorter {
-    private File file = new File("data/exercise41_input.txt");
     private int numPeople;
     private List<String> people = new ArrayList<>();
 
@@ -19,9 +18,11 @@ public class NameSorter {
         this.numPeople = 0;
     }
 
-    public void readFile(){
+    public void readFile(String inFilePath){
+        File inFile = new File(inFilePath);
+
         //try(open input file)
-        try(Scanner inputFile = new Scanner(file)) {
+        try(Scanner inputFile = new Scanner(inFile)) {
             //while(there are names to read in file)
             while(inputFile.hasNextLine()) {
                 //Read Last name and first name into ArrayList
@@ -47,9 +48,9 @@ public class NameSorter {
         Collections.sort(people);
     }
 
-    public void outputSortedNames(List<String> people) {
+    public void outputSortedNames(List<String> people, String outputFilePath) {
         //try(open output file)
-        try(Formatter outputFile = new Formatter("data/exercise41_output.txt")) {
+        try(Formatter outputFile = new Formatter(outputFilePath)) {
             //print "Total of 'numPeople' names"
             outputFile.format("Total of %d names%n", this.numPeople);
             //print "-----------------"

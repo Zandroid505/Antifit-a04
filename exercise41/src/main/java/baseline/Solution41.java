@@ -11,11 +11,11 @@ public class Solution41 {
         NameSorter sortManager = new NameSorter();
 
         //Call readFile method
-        sortManager.readFile();
+        sortManager.readFile("data/exercise41_input.txt");
         //Call sortNames(getPeople()) method
         sortManager.sortNames(sortManager.getPeople());
 
         //Call outputSortedNames() method
-        sortManager.outputSortedNames(sortManager.getPeople());
+        sortManager.outputSortedNames(sortManager.getPeople(), "data/exercise41_output.txt");
     }
 }

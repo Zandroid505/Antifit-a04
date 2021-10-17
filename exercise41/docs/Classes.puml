@@ -16,18 +16,17 @@ class Solution41 {
 }
 
 class NameSorter {
-    - file: File
     - numPeople: int
     - people: ArrayList<String>
 
     + NameSorter()
         'Initializes the amount of people to 0
 
-    + readFile(): void
+    + readFile(String): void
     + getPeople(): ArrayList<String>
 
     + sortNames(ArrayList<String>): void
-    + outputSortedNames(ArrayList<String>): void
+    + outputSortedNames(ArrayList<String>, String): void
 }
 
 @enduml

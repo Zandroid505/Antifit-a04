@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 first_name last_name
+ */
+
 package baseline;
 
 import org.junit.jupiter.api.Test;
@@ -5,10 +10,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class WebsiteGeneratorTest {
-    WebsiteGenerator webDev1 = new WebsiteGenerator();
 
     @Test
     void checkIfWebsiteFolderIsCreatedWithoutError() {
+        WebsiteGenerator webDev1 = new WebsiteGenerator();
         String expected = "Created data/Gaggle";
 
         webDev1.setWebsiteName("Gaggle");
@@ -21,36 +26,42 @@ class WebsiteGeneratorTest {
 
     @Test
     void checkIfHtmlFileIsCreatedWithoutError() {
-        String expected = "Created data/Gaggle/index.html";
+        WebsiteGenerator webDev2 = new WebsiteGenerator();
+        String expected = "Created data/Fakebook/index.html";
 
-        webDev1.setWebsiteName("Gaggle");
-        webDev1.setAuthorName("Jeff Robinson");
+        webDev2.setWebsiteName("Fakebook");
+        webDev2.setAuthorName("Jeff Robinson");
 
-        String actual = webDev1.createHtml();
+        webDev2.createWebsiteFolder();
+        String actual = webDev2.createHtml();
 
         assertEquals(expected, actual);
     }
 
     @Test
     void checkIfJavaScriptFolderIsCreatedWithoutError() {
-        String expected = "Created data/Gaggle/js/";
+        WebsiteGenerator webDev3 = new WebsiteGenerator();
+        String expected = "Created data/Instatrash/js/";
 
-        webDev1.setWebsiteName("Gaggle");
-        webDev1.setAuthorName("Jeff Robinson");
+        webDev3.setWebsiteName("Instatrash");
+        webDev3.setAuthorName("Jeff Robinson");
 
-        String actual = webDev1.createJavaScriptFolder();
+        webDev3.createWebsiteFolder();
+        String actual = webDev3.createJavaScriptFolder();
 
         assertEquals(expected, actual);
     }
 
     @Test
     void checkIfCssFolderIsCreatedWithoutError() {
-        String expected = "Created data/Gaggle/css/";
+        WebsiteGenerator webDev4 = new WebsiteGenerator();
+        String expected = "Created data/Snapcat/css/";
 
-        webDev1.setWebsiteName("Gaggle");
-        webDev1.setAuthorName("Jeff Robinson");
+        webDev4.setWebsiteName("Snapcat");
+        webDev4.setAuthorName("Jeff Robinson");
 
-        String actual = webDev1.createCssFolder();
+        webDev4.createWebsiteFolder();
+        String actual = webDev4.createCssFolder();
 
         assertEquals(expected, actual);
     }

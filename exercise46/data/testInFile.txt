@@ -1,0 +1,4 @@
+happy happy sad mad
+mad mad happy sad
+sad sad sad sad sad
+sad mad

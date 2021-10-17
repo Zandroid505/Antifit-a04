@@ -1,0 +1,39 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 first_name last_name
+ */
+
+@startuml
+'https://plantuml.com/class-diagram
+
+class Solution44
+class Product
+
+Product o-- Solution44
+
+class Solution44 {
+    'Creates Product object to call Product methods
+
+    convertJsonToProduct()
+    searchForProduct()
+}
+
+class Product {
+    - input: Scanner
+    - name: String
+    - price: double
+    - quantity: int
+
+    + Product(String, double, int)
+        'Initializes attributes to arguments
+
+    + getName(): String
+    + getPrice(): double
+    + getQuantity(): int
+
+    + convertJsonToProduct(String): List<Product>
+    + searchForProduct(List<Product>): void
+    - printItemInfo(Product): void
+}
+
+@enduml

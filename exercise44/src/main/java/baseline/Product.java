@@ -27,6 +27,18 @@ public class Product {
         this.quantity = quantity;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public double getPrice() {
+        return this.price;
+    }
+
+    public int getQuantity() {
+        return this.quantity;
+    }
+
     public List<Product> convertJsonToProduct(String jsonFilePath) {
         List<Product> inventory = new ArrayList<>();
 
@@ -53,7 +65,7 @@ public class Product {
                 //inventory.add(productTemp)
                 inventory.add(productTemp);
             }
-        }//catch(FileNotFoundException | IOException | ParseException | Exception e)
+        }//catch(Exception e)
         catch(Exception e) {
             //printStackTrace
             e.printStackTrace();

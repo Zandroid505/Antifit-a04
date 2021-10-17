@@ -1,6 +1,4 @@
 
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 J
 data/exercise46_output.txt,2\3\2380e100d520c37e1644cedf01e6f6d73f049397
 F
@@ -11,11 +9,3 @@ I
 data/exercise46_input.txt,4\e\4e2718794362dab8f52703c7f4e7c27422d9fc80
 C
 data/testInFile.txt,1\f\1f898560d3f8cde909dbfacb362cc19701584aa2
-[
-+src/test/java/baseline/WordCounterTest.java,8\f\8fd978861e78c8d10446140e963668c38904264b
-W
-'src/main/java/baseline/WordCounter.java,8\0\80ba96df6cddd86e9c8dd5885ae80126945bcc22
-F
-docs/classDiagram.puml,1\6\1670a1f259b64472169d66bcdf8dcccdb57ec2e4
-V
-&src/main/java/baseline/Solution46.java,c\7\c7a5cf7864afec49876c30cd1330b01956787056

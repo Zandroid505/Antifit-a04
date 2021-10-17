@@ -9,6 +9,8 @@
 WordCounter o-- Solution46
 
 class Solution46 {
+    'Create WordCounter object and call methods
+
     readInFile()
     sortMap()
     outputWordFrequency()

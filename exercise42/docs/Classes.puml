@@ -9,11 +9,9 @@
 DataParser o-- Solution42
 
 class Solution42 {
-    parsingPerson: DataParser
-
-    parsingPerson.readInFile(File)
-    parsingPerson.outputFormattedData(File)
-        'Creates DataParser Object and uses it to parse data
+    'Creates DataParser Object and uses it to parse data
+    readInFile(File)
+    outputFormattedData(File)
 }
 
 class DataParser {

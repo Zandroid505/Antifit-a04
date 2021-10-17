@@ -62,7 +62,7 @@ public class DataParser {
     }
 
     public void outputFormattedData(File outFile) {
-        String outputSpecifiers = "%-10s%-10s%-8s%n";
+        String outputSpecifiers = "%-10s%-10s%-5s%n";
 
         //try(open output file)
         try(Formatter outputFormat = new Formatter(outFile)) {

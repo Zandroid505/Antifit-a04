@@ -9,6 +9,10 @@
 WordReplacer o--Solution45
 
 class Solution45 {
+    - input: Scanner
+
+    'Create WordReplacer object to call methods
+
     readInputFile()
     replaceWord()
     outputFile()

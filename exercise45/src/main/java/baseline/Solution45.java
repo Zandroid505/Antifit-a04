@@ -14,17 +14,17 @@ public class Solution45 {
         //Create WordReplacer object
         WordReplacer englishTeacher = new WordReplacer();
 
-        //ask for file (including path)
-        System.out.println("Type in the path of your file: ");
-        //Scan input into inFilePath
-        String inFilePath = input.nextLine();
-
         //Call readInputFile(inFilePath)
-        englishTeacher.readInputFile(inFilePath);
+        englishTeacher.readInputFile("data/exercise45_input.txt");
         //editedString = Call replaceWord()
         String editedString = englishTeacher.replaceWord();
 
+        //ask for file (including path)
+        System.out.println("Type in the path of your output file: ");
+        //Scan input into inFilePath
+        String outFilePath = input.nextLine();
+
         //Call outputFile(editedString, outFilePath)
-        englishTeacher.outputFile(editedString, "data/exercise45_output.txt");
+        englishTeacher.outputFile(editedString, outFilePath);
     }
 }
